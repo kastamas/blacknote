@@ -8,7 +8,7 @@
 //TODO:Check Cookies
 //TODO:Значения прыгают
 ?>
-<script>
+<!--<script>
     jQuery(function($){
         function timer(){
             var obj = document.getElementById('timer_inp');
@@ -26,22 +26,16 @@
         }
         setTimeout(timer,1000);
     });
-</script>
+</script>-->
 <?php
-if(isset($_COOKIE['id'])):{
+/*if(isset($_COOKIE['id'])):{
     $value = 1800 - (time() - $_COOKIE['demo_start_time']);
-}
-    ?>
-    <div id="informator_left_top"> <!--Left bottom angle-->
-        <p>Времени до конца демо осталось: <span id="timer_inp"><?=$value?></span> Секунд</p>
-    </div>
-<?php
-/*else:{
-    echo("<html><script>window.location = 'http://blacknotedemo/user/index.php'</script></html>");
-    die;
 }*/
+    ?>
+    <!--<div id="informator_left_top"> <!--Left bottom angle-->
+        <!--<p>Времени до конца демо осталось: <span id="timer_inp"><?/*=$value*/?></span> Секунд</p>-->
+  <!--  </div>-->
 
-endif; ?>
 
 
 
@@ -71,7 +65,7 @@ endif; ?>
 </div>
 <!--Форма ответа после отправки-->
 <div id="hidden_response_form" class="modal_div" style=" color: #818182;
-    font-size: 11pt;    min-height: auto; padding:0;  ">
+    font-size: 11pt;    min-height:inherit; padding:0;  ">
     <p style="color:#398abf;    text-align: center;">Сообщение успешно отправлено :)</p>
 </div>
 

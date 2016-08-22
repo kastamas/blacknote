@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Вход</title>
+    <link rel="stylesheet" type="text/css" href="templates/main_style.css" media="all">
+</head>
+<body>
+<?/*Informator*/ include("/main_scripts/informator.php")?>
+
+        <div id="container_mini">
+            <div id="logotype_mini"></div>
+            <!--<h1>Добро пожаловать</h1>-->
+            <br>
+            <form action="../login.php" method="post">
+                <label for="login"></label>
+                <input type="text" name="login"  id='login' autocomplete="off" placeholder="Логин" required>
+                <br><br>
+                <label for="password"></label>
+                <input type="password" name="password" id='password' autocomplete="off" placeholder="Пароль" required>
+                <br><br>
+			 
+				<br>
+				<br>
+                <input type="submit" name="submit" class='functional_button' value="Войти">
+            </form>
+            <p style='width: 381px;'>Нет аккаунта? <a href="registration.php">Зарегистрируйтесь</a>. Это быстро ;)</p>
+        </div>
+</body>
+</html>

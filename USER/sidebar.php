@@ -64,14 +64,14 @@ $('#sidebar').removeClass('sidebar_floating');
 
 
         <?php //Ежедневник
-        /*
+
         if(stripos($current_url, "/MODULES/module_scheduler/scheduler.php") === false)://если подстроки нет
         ?>
         <a href="<?=$config_domain_name?>/MODULES/module_scheduler/scheduler.php">
             <div class="item">
                 <div class="wrap">
                     <div class="indicator" id="sb_scheduler"></div>
-<!--                    <div class="icon" id="ico_cabinet"></div>-->
+                  <div class="icon" id="ico_cabinet"></div>
                 </div>
                 Ежедневник</div>
         </a>
@@ -82,7 +82,7 @@ $('#sidebar').removeClass('sidebar_floating');
             <div class="item_active">
                 <div class="wrap">
                     <div class="indicator" id="sb_scheduler"></div>
-<!--                    <div class="icon" id="ico_cabinet"></div>-->
+                   <div class="icon" id="ico_cabinet"></div>
                 </div>
                 Ежедневник</div>
 
@@ -91,11 +91,11 @@ $('#sidebar').removeClass('sidebar_floating');
                 <div class="item_selected">
                     <div class="wrap">
                         <div class="indicator" id="sb_scheduler"></div>
-<!--                        <div class="icon" id="ico_cabinet"></div>-->
+                      <div class="icon" id="ico_cabinet"></div>
                     </div>
                     Ежедневник</div>
             </a>
-        <?php  endif;  endif;  */?>
+        <?php  endif;  endif;  ?>
 
 
     <?php //Заметки

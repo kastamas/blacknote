@@ -16,9 +16,9 @@ if (!$connect) {
     die('Ошибка подключения (' . mysqli_connect_errno() . ') '. mysqli_connect_error());
 }
 /*mysqli_query($connect,"DROP DATABASE `bn_demo_user_".$_COOKIE['id']."` ");//*/
-
+/*
 mysqli_query($connect,"DELETE FROM `module_notes` WHERE `user_id`='$config_cookie_id'");
-mysqli_query($connect,"DELETE FROM `module_notes_folders` WHERE `user_id`='$config_cookie_id'");
+mysqli_query($connect,"DELETE FROM `module_notes_folders` WHERE `user_id`='$config_cookie_id'");*/
 
 setcookie("id", "", time() -400*60, "/");
 setcookie("demo_start_time", "", time()-400*60, "/");

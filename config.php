@@ -7,11 +7,11 @@
  */
 
 //DATABASE
-define("CONFIG_DOMAIN_NAME","");
-define("CONFIG_HOST_NAME","");
-define("CONFIG_MAIN_DB_NAME","");
-define("CONFIG_DB_USER_NAME","");
-define("CONFIG_DB_USER_PASSWORD","");
+define("CONFIG_DOMAIN_NAME","http://blacknotedemogit");
+define("CONFIG_HOST_NAME","localhost");
+define("CONFIG_MAIN_DB_NAME","bn_demo");
+define("CONFIG_DB_USER_NAME","mysql");
+define("CONFIG_DB_USER_PASSWORD","mysql");
 
 //USER'S Cookies
 $config_cookie_id = intval($_COOKIE['id']);

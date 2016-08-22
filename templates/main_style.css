@@ -5,8 +5,9 @@
 -------------------- */
 body{
 	font-family: 'Roboto_light', Arial, sans-serif;
-    background: #f2f2f2 no-repeat;
+    background: URL("../" )#f2f2f2 no-repeat;
     background-size: 100%;
+
 
 }
 /*--------------------
