@@ -22,7 +22,7 @@ include "scripts/TimeHelper.php";
 use \korytoff\helpers\TimeHelper;
 
 //Подключение к базе данных конкретного пользователя
-$connect_user_db = mysqli_connect('localhost', 'mysql', 'mysql', 'bn_user_'.$_COOKIE['id']);
+$connect_user_db = mysqli_connect(CONFIG_HOST_NAME, CONFIG_DB_USER_NAME, CONFIG_DB_USER_PASSWORD, CONFIG_MAIN_DB_NAME);
 if (!$connect_user_db){
     die('Ошибка подключения (' . mysqli_connect_errno() . ') '
         . mysqli_connect_error());

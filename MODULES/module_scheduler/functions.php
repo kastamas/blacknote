@@ -1,4 +1,6 @@
 <?
+require_once('../../config.php');
+
 $action = $_GET['act'];
 
 switch($action){
@@ -57,7 +59,7 @@ if(isset($_POST['add'])&& !empty($_POST['add'])){
     //Работа со временем
     $creation_datetime = time();
 
-    $query = mysqli_query($connect_user_db,"INSERT INTO `module_scheduler` SET `content`='$content',`date`='".$_POST['date']."', `creation_datetime` ='$creation_datetime', `modification_datetime` ='$creation_datetime'  ");
+    $query = mysqli_query($connect_user_db,"INSERT INTO `module_scheduler` SET `content`='$content', `user_id`='$config_cookie_id',`date`='".$_POST['date']."', `creation_datetime` ='$creation_datetime', `modification_datetime` ='$creation_datetime'  ");
     echo("<html><script>window.location = 'scheduler.php'</script></html>");
 }
 }break;
@@ -66,7 +68,7 @@ if(isset($_POST['add'])&& !empty($_POST['add'])){
 case'edit':{
     if($_GET['id']) $id = $_GET['id'];
                else go_back();
-    $info = mysqli_query($connect_user_db,"SELECT * FROM `module_scheduler` WHERE `id`='$id'");
+    $info = mysqli_query($connect_user_db,"SELECT * FROM `module_scheduler` WHERE `user_id`='$config_cookie_id' AND `id`='$id' ");
     $row = mysqli_fetch_array($info);
     ?>
     <!DOCTYPE html>
@@ -99,9 +101,9 @@ case'edit':{
             $content = $_POST['content'];
             $content = mysqli_real_escape_string($connect_user_db, $content);
             $modification_datetime = time();
-            $query = mysqli_query($connect_user_db,"UPDATE  `module_scheduler` SET  `content` = '$content', `modification_datetime`='$modification_datetime' WHERE `id`='$id'");
+            $query = mysqli_query($connect_user_db,"UPDATE  `module_scheduler` SET  `content` = '$content', `modification_datetime`='$modification_datetime' WHERE `user_id`='$config_cookie_id' AND `id`='$id'");
         }
-        else $query = mysqli_query($connect_user_db,"DELETE FROM `module_scheduler` WHERE `id`='$id' LIMIT 1");
+        else $query = mysqli_query($connect_user_db,"DELETE FROM `module_scheduler` WHERE `user_id`='$config_cookie_id' AND `id`='$id' LIMIT 1");
 
 
 
