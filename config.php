@@ -7,9 +7,9 @@
  */
 
 //DATABASE
-define("CONFIG_DOMAIN_NAME","http://blacknotedemogit");
+define("CONFIG_DOMAIN_NAME","http://localhost/blacknote");
 define("CONFIG_HOST_NAME","localhost");
-define("CONFIG_MAIN_DB_NAME","bn_demo");
+define("CONFIG_MAIN_DB_NAME","bn_main");
 define("CONFIG_DB_USER_NAME","mysql");
 define("CONFIG_DB_USER_PASSWORD","mysql");
 

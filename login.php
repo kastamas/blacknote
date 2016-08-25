@@ -30,4 +30,4 @@ if(isset($_POST['submit'])&& !empty($_POST['submit'])){
     }else echo("Все поля обязательны для заполнения");
 }
 
-include("Templates/login.html");
+include("templates/login.html");

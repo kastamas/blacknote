@@ -22,7 +22,8 @@
 <div id="container_mini" style="">
     <div id="logotype_mini" style=""></div>
 
-    <?php if(!isset($_COOKIE['id']))://Если демка не начата?>
+    <?php if(!isset($_COOKIE['id']))://Если демка не начата
+        ?>
         <div style="margin: 0 auto; width:100%;" >
             <h1 style='width: auto; height: 60px;padding-top: 10px; '>Добро пожаловать</h1>
             <p style='width: auto;'>«Блэкнот» - это Web-сервис, основная цель которого - максимально простое и удобное хранение  пользовательской информации</p>

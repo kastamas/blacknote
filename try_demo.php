@@ -21,7 +21,7 @@ $query = mysqli_query($connect,"SHOW TABLE STATUS LIKE 'users'");
 $array  = mysqli_fetch_array($query);
 $AI_value = $array['Auto_increment'];
 
- //Добавляю пользователя в таблицу
+ //Добавляю пользователя в таблицу kek
  $registration_datetime = time();
  mysqli_query($connect, "INSERT INTO `users` SET `reg_date`='$registration_datetime'");
 

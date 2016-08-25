@@ -16,7 +16,7 @@ require_once("../config.php");
     <meta charset="UTF-8">
     <title>Кабинет</title>
     <link href='../templates/main_style.css' media='screen' rel='stylesheet'>
-    <link href='../MODULES/module_notes/templates/module_notes.css'  media='screen' rel='stylesheet'>
+    <link href='../modules/module_notes/templates/module_notes.css'  media='screen' rel='stylesheet'>
     <script type='text/javascript' src='../js/jquery-2.2.3.min.js'></script>
     <script type='text/javascript' src='../js/modal_message.js'></script>
 </head>
@@ -77,7 +77,7 @@ require_once("../config.php");
                       $note_name = $row['content'];
                   } else $note_name = 'Пустая заметка';
 
-                  $notes = $notes."<div class='note' title='".$note_name."'><a href='" . CONFIG_DOMAIN_NAME . "/MODULES/module_notes/notes.php?act=view&id=".$row['id']."'><div class='decor'></div><p>".$note_name."</p></a></div>";
+                  $notes = $notes."<div class='note' title='".$note_name."'><a href='" . CONFIG_DOMAIN_NAME . "/modules/module_notes/notes.php?act=view&id=".$row['id']."'><div class='decor'></div><p>".$note_name."</p></a></div>";
                   //echo("<div class='note' title='".$row["name"]."'><a href='notes.php?act=view&id=".$row['id']."'><div class='decor'></div><p>".$row['name']."</p></a></div>");
               }
 
@@ -96,7 +96,7 @@ require_once("../config.php");
           <?php endif;?>
         </div>
         </div>
-    <?include("../user/sidebar.php")?><!--SIDEBAR PLACE-->
+    <?php include("sidebar.php")?><!--SIDEBAR PLACE-->
 </div>
 
 

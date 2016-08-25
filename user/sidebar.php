@@ -65,9 +65,9 @@ $('#sidebar').removeClass('sidebar_floating');
 
         <?php //Ежедневник
 
-        if(stripos($current_url, "/MODULES/module_scheduler/scheduler.php") === false)://если подстроки нет
+        if(stripos($current_url, "/modules/module_scheduler/scheduler.php") === false)://если подстроки нет
         ?>
-        <a href="<?=$config_domain_name?>/MODULES/module_scheduler/scheduler.php">
+        <a href="<?=$config_domain_name?>/modules/module_scheduler/scheduler.php">
             <div class="item">
                 <div class="wrap">
                     <div class="indicator" id="sb_scheduler"></div>
@@ -76,7 +76,7 @@ $('#sidebar').removeClass('sidebar_floating');
                 Ежедневник</div>
         </a>
             <?php else://если подстрока есть
-            if((strcasecmp($current_url,"/MODULES/module_scheduler/scheduler.php")==0) || (strcasecmp($current_url,"/MODULES/module_scheduler/scheduler.php#today")==0)):?>
+            if((strcasecmp($current_url,"/modules/module_scheduler/scheduler.php")==0) || (strcasecmp($current_url,"/modules/module_scheduler/scheduler.php#today")==0)):?>
 
 
             <div class="item_active">
@@ -87,7 +87,7 @@ $('#sidebar').removeClass('sidebar_floating');
                 Ежедневник</div>
 
                 <?php else://если строки не совпадают ?>
-            <a href="<?=$config_domain_name?>/MODULES/module_scheduler/scheduler.php">
+            <a href="<?=$config_domain_name?>/modules/module_scheduler/scheduler.php">
                 <div class="item_selected">
                     <div class="wrap">
                         <div class="indicator" id="sb_scheduler"></div>
@@ -99,9 +99,9 @@ $('#sidebar').removeClass('sidebar_floating');
 
 
     <?php //Заметки
-    if(stripos($current_url, "/MODULES/module_notes/notes.php") === false)://если подстроки нет
+    if(stripos($current_url, "/modules/module_notes/notes.php") === false)://если подстроки нет
         ?>
-        <a href="<?=CONFIG_DOMAIN_NAME?>/MODULES/module_notes/notes.php">
+        <a href="<?=CONFIG_DOMAIN_NAME?>/modules/module_notes/notes.php">
             <div class="item" style="">
                 <div class="wrap">
                     <div class="indicator" id="sb_notes"></div>
@@ -110,7 +110,7 @@ $('#sidebar').removeClass('sidebar_floating');
                 Заметки</div>
         </a>
         <?php else://если подстрока есть
-            if(strcasecmp($current_url, "/MODULES/module_notes/notes.php")==0)://если строки совпадают?>
+            if(strcasecmp($current_url, "/modules/module_notes/notes.php")==0)://если строки совпадают?>
 
             <div class="item_active">
                 <div class="wrap">
@@ -120,7 +120,7 @@ $('#sidebar').removeClass('sidebar_floating');
                 Заметки</div>
 
     <?php else://если строки не совпадают ?>
-        <a href="<?=CONFIG_DOMAIN_NAME?>/MODULES/module_notes/notes.php">
+        <a href="<?=CONFIG_DOMAIN_NAME?>/modules/module_notes/notes.php">
             <div class="item_selected">
                 <div class="wrap">
                     <div class="indicator" id="sb_notes"></div>
@@ -138,36 +138,38 @@ $('#sidebar').removeClass('sidebar_floating');
 
 
 
-    <?php/* //Настройки
+    <?php
+    //Настройки
+
     if(stripos($current_url, "/user/settings.php") === false)://если подстроки нет
         ?>
-        <a href="http://blacknote/user/settings.php">
+        <!--<a href="http://blacknote/user/settings.php">
             <div class="item">
                 <div class="wrap">
                     <div class="indicator" id="sb_settings"></div>
                     <div class="icon" id="ico_cabinet"></div>
                 </div>
                 Настройки</div>
-        </a>
+        </a>-->
     <?php else://если подстрока есть
         if(strcmp($current_url,"/user/settings.php")==0):?>
 
-            <div class="item_active">
+           <!-- <div class="item_active">
                 <div class="wrap">
                     <div class="indicator" id="sb_settings"></div>
                     <div class="icon" id="ico_cabinet"></div>
                 </div>
-                Настройки</div>
-        <?php else://если строки не совпадают ?>
-        <a href="http://blacknote/user/settings.php">
+                Настройки</div>-->
+        <?php else:/*//если строки не совпадают */?>
+        <!--<a href="http://blacknote/user/settings.php">
             <div class="item_selected">
                 <div class="wrap">
                     <div class="indicator" id="sb_settings"></div>
                     <div class="icon" id="ico_cabinet"></div>
                 </div>
                 Настройки</div>
-        </a>
-        <?php  endif;  endif; */ ?>
+        </a>-->
+    <?php  endif;  endif; ?>
 
     <!--
     <a href="">
